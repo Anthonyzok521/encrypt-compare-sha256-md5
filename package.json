@@ -4,8 +4,8 @@
   "description": "Encrypt to SHA256 and MD5 Algorithm and Compare with a Text Encrypted to SHA256 or MD5",
   "main": "app.js",
   "scripts": {
-    "start" : "node app.js",
-    "dev" : "node --watch app.js",
+    "start": "node app.js",
+    "dev": "node --watch app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,7 +33,11 @@
   },
   "homepage": "https://github.com/anthonyzok521/encrypt-compare-sha256-md5#readme",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
   }
 }

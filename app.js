@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 app.set('views', './') // specify the views directory
 app.set('view engine', 'ejs') // register the template engine
+app.use(express.static(path.join(__dirname, '/')))
 
 app.get('/', (req,res)=>{
     res.render('index')
