@@ -1,0 +1,39 @@
+{
+  "name": "encrypt-compare-sha256-md5",
+  "version": "1.0.0",
+  "description": "Encrypt to SHA256 and MD5 Algorithm and Compare with a Text Encrypted to SHA256 or MD5",
+  "main": "app.js",
+  "scripts": {
+    "start" : "node app.js",
+    "dev" : "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonyzok521/encrypt-compare-sha256-md5.git"
+  },
+  "keywords": [
+    "encrypt",
+    "sha256",
+    "md5",
+    "sha256",
+    "md5",
+    "compare",
+    "hash",
+    "hash",
+    "sha256",
+    "encrypt",
+    "to",
+    "md5"
+  ],
+  "author": "AC GAMES (c)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonyzok521/encrypt-compare-sha256-md5/issues"
+  },
+  "homepage": "https://github.com/anthonyzok521/encrypt-compare-sha256-md5#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
