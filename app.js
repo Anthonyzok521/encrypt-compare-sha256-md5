@@ -6,7 +6,6 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 const sha256 = require('js-sha256').sha256;
 const md5 = require('md5');
-const { match } = require('assert');
 
 const compare = (body) => {
 
