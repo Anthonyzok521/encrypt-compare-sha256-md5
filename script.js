@@ -60,8 +60,7 @@ btn_start.addEventListener('click', async (e) => {
   compare.classList.remove('hidden');
   container_hash.classList.remove('hidden');
   container_hash.classList.add('flex');
-  console.log(inputText.value, inputHash)
-  await fetch('http://localhost:3000/', {
+  await fetch('encrypt-compare-sha256-md5.vercel.app/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -82,5 +81,5 @@ btn_start.addEventListener('click', async (e) => {
     });
     return;
   }
-  alert('Select an algorithm')
+  alert('Select an algorithm');
 });
