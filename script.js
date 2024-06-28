@@ -71,9 +71,11 @@ btn_start.addEventListener('click', async (e) => {
     .then(response => {
       console.log(response)
       if(response.message == 'Match'){
+        container_hash.classList.remove('shadow-red-600');  
         container_hash.classList.add('shadow-green-600');               
       }
       else{
+        container_hash.classList.remove('shadow-green-600');  
         container_hash.classList.add('shadow-red-600');   
       }
       compare.textContent = response.message;
