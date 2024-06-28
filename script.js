@@ -56,21 +56,31 @@ algorithms.addEventListener('mousedown', (e) => {
 
 btn_start.addEventListener('click', async (e) => {
   e.preventDefault();
-
+  if($algorithm){
   compare.classList.remove('hidden');
   container_hash.classList.remove('hidden');
   container_hash.classList.add('flex');
-
+  console.log(inputText.value, inputHash)
   await fetch('http://localhost:3000/', {
     method: 'POST',
     headers: {
-      'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({text: inputText.value, hash: inputHash, algorithm: $algorithm})
+    body: JSON.stringify({text: inputText.value, hash: inputHash.value, algorithm: $algorithm})
   })
     .then(response => response.json())
     .then(response => {
-      console.log(response);
+      console.log(response)
+      if(response.message == 'Match'){
+        container_hash.classList.add('shadow-green-600');               
+      }
+      else{
+        container_hash.classList.add('shadow-red-600');   
+      }
+      compare.textContent = response.message;
+      hash_result.textContent = response.hash;
     });
+    return;
+  }
+  alert('Select an algorithm')
 });

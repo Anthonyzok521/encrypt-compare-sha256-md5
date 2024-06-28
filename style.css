@@ -947,4 +947,8 @@ video {
   .md\:w-2\/3 {
     width: 66.666667%;
   }
+
+  .md\:w-full {
+    width: 100%;
+  }
 }
