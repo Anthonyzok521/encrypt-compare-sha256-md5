@@ -8,7 +8,8 @@
     npm run dev 
 ```
 
-> [!NOTE] For the styles, use:
+> [!NOTE]
+> For the styles, use:
 
 ```bash
     npx tailwindcss -i ./input.css -o ./style.css --watch
