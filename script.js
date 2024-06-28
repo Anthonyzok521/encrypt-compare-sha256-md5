@@ -60,7 +60,7 @@ btn_start.addEventListener('click', async (e) => {
   compare.classList.remove('hidden');
   container_hash.classList.remove('hidden');
   container_hash.classList.add('flex');
-  await fetch('encrypt-compare-sha256-md5.vercel.app/', {
+  await fetch('https://encrypt-compare-sha256-md5.onrender.com/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
