@@ -6,12 +6,14 @@ const compare = document.querySelector('#compare');
 const inputText = document.querySelector('#inputText');
 const inputHash = document.querySelector('#inputHash');
 
+let $algorithm = '';
+
 const verifyCheckAlgorithm = (label) => {
   try {
     const algorithm = label.toLowerCase();
+    $algorithm = algorithm;
     const input = document.querySelector(`#algorithm-${algorithm}`) || null;
     input.checked = true;
-    input.ch
     return input.value;
   }
   catch (err) {
@@ -65,7 +67,7 @@ btn_start.addEventListener('click', async (e) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({text: inputText.value })
+    body: JSON.stringify({text: inputText.value, hash: inputHash, algorithm: $algorithm})
   })
     .then(response => response.json())
     .then(response => {
