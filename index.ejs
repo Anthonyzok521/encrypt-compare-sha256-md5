@@ -4,34 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Encrypt Compare</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body class="bg-zinc-800">
-    <h1 class="mt-4 text-xl text-center text-white font-mono">Encrypt Compare</h1>
-    <form class="flex flex-wrap flex-col justify-center items-center gap-4 w-full h-dvh">
+    <div class="container flex flex-col flex-wrap items-center px-10">
+        <h1 class="pt-20 mb-12 text-3xl text-center text-white font-mono">Encrypt Compare</h1>
+        <span id="compare" class="text-white font-mono font-bold"></span>
+        <div id="container-hash" class="hidden shadow-md items-center justify-center rounded-md px-10 mb-14 w-full h-20 bg-zinc-700 ">
+            <span id="hash-result" class="w-max text-lg text-center text-gray-400 font-mono overflow-auto"></span>
+        </div>
+    </div>
+    <form class="flex flex-wrap flex-col items-center gap-4 w-full h-dvh">        
         <div class="flex flex-wrap justify-center items-center gap-4 w-full">
             <div class="flex justify-between w-full md:w-2/3 gap-4 max-md:flex-col px-10">
-                <input class="text-xl max-md:h-16 w-full p-2 rounded-md outline-none shadow-sm focus:shadow-cyan-500 transition-all focus:border-b-2 focus:border-sky-400 " type="text" placeholder="Your text" aria-label="Your text">
+                <input id='inputText' class="text-xl max-md:h-16 w-full p-2 rounded-md outline-none shadow-sm focus:shadow-cyan-500 transition-all focus:border-b-2 focus:border-sky-400 " type="text" placeholder="Your text" aria-label="Your text">
             
-                <input class="text-xl max-md:h-16 w-full p-2 rounded-md outline-none shadow-sm focus:shadow-cyan-500 transition-all focus:border-b-2 focus:border-green-400" type="text" placeholder="Your hash" aria-label="Your hash">
+                <input id='inputHash' class="text-xl max-md:h-16 w-full p-2 rounded-md outline-none shadow-sm focus:shadow-cyan-500 transition-all focus:border-b-2 focus:border-green-400" type="text" placeholder="Your hash" aria-label="Your hash">
             </div>            
-                <div class="flex justify-between md:w-2/3">
-                    <div class="flex items-center justify-center border border-gray-200 rounded">
-                        <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="absolute hidden">
-                        <label for="bordered-radio-1" class="w-full py-4 ms-2 text-sm font-medium text-white">SHA256</label>
-                    </div>
-                    <div class="flex w-full items-center border border-gray-200 rounded">
-                        <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="absolute  hidden">
-                        <label for="bordered-radio-1" class="w-full py-4 ms-2 text-sm font-medium text-white">MD5</label>
-                    </div>
+            <div id="algorithms" class="flex justify-between md:w-2/3 w-full px-10 gap-2">
+                <div id="div-sha256" class="flex w-full items-center justify-center border border-gray-200 rounded hover:bg-gray-400">
+                    <input id="algorithm-sha256" type="radio" value="sha256" name="algorithm" class="absolute hidden">
+                    <label for="algorithm-sha256" class="w-full py-4 ms-2 text-sm font-medium text-white text-center">SHA256</label>
                 </div>
+                <div id="div-md5" class="flex w-full items-center border border-gray-200 rounded hover:bg-gray-400">
+                    <input id="algorithm-md5" type="radio" value="md5" name="algorithm" class="absolute  hidden">
+                    <label for="algorithm-md5" class="w-full py-4 ms-2 text-sm font-medium text-white text-center">MD5</label>
+                </div>
+            </div>
+            <div class="flex justify-between md:w-2/3 w-full py-10">
+                <div class="flex w-full items-center justify-center">
+                    <button id='btn-start' class="py-4 px-1 bg-sky-500 w-1/2 rounded-md text-xl text-white font-bold active:bg-sky-300 transition-all hover:bg-sky-700">Start</button>
+                </div>
+            </div>
         </div>        
     </form>
 </body>
-<script>
-
-</script>
-
+<script src="/script.js"></script>
 </html>
